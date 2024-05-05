@@ -1,9 +1,10 @@
 package com.jozufozu.flywheel.api.event;
 
+import net.neoforged.bus.api.Event;
+
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraftforge.eventbus.api.Event;
 
 /**
  * This event is posted to the Forge event bus.

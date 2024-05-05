@@ -2,6 +2,8 @@ package com.jozufozu.flywheel.lib.model.baked;
 
 import java.util.function.BiFunction;
 
+import net.neoforged.neoforge.client.model.data.ModelData;
+
 import org.jetbrains.annotations.Nullable;
 
 import com.jozufozu.flywheel.api.material.Material;
@@ -19,7 +21,6 @@ import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.ModelData;
 
 public final class ForgeBakedModelBuilder extends BakedModelBuilder {
 	@Nullable

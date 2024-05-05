@@ -1,6 +1,6 @@
 package com.jozufozu.flywheel.api.event;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.neoforged.bus.api.Event;
 
 /**
  * This event is posted to the Forge event bus.

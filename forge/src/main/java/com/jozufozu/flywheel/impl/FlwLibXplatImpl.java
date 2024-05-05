@@ -2,6 +2,9 @@ package com.jozufozu.flywheel.impl;
 
 import java.lang.reflect.Field;
 
+import net.neoforged.fml.ModList;
+import net.neoforged.fml.util.ObfuscationReflectionHelper;
+
 import org.jetbrains.annotations.Nullable;
 
 import com.jozufozu.flywheel.lib.internal.FlwLibXplat;
@@ -21,8 +24,6 @@ import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 
 public class FlwLibXplatImpl implements FlwLibXplat {
 	@Override
@@ -34,6 +35,7 @@ public class FlwLibXplatImpl implements FlwLibXplat {
 				field.setAccessible(true);
 				field.set(dispatcher, field.get(defaultDispatcher));
 			}
+			// fixme ~ is this still needed? neoforge uses mojmap at runtime
 			ObfuscationReflectionHelper.setPrivateValue(BlockRenderDispatcher.class, dispatcher, new ModelBlockRenderer(Minecraft.getInstance().getBlockColors()), "f_110900_");
 		} catch (Exception e) {
 			FlwImpl.LOGGER.error("Failed to initialize vanilla BlockRenderDispatcher!", e);

@@ -3,6 +3,8 @@ package com.jozufozu.flywheel.lib.model.baked;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
+import net.neoforged.neoforge.client.model.data.ModelData;
+
 import org.jetbrains.annotations.Nullable;
 
 import com.jozufozu.flywheel.api.material.Material;
@@ -18,7 +20,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockAndTintGetter;
-import net.minecraftforge.client.model.data.ModelData;
 
 public final class ForgeMultiBlockModelBuilder extends MultiBlockModelBuilder {
 	@Nullable
